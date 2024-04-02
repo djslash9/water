@@ -1,19 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-
-from streamlit_option_menu import option_menu
-
-
-
-# Function to create pie chart
-def create_pie_chart(dataframe, column,  size=(4, 4)):
-    counts = dataframe[column].value_counts()
-    fig, ax = plt.subplots(figsize=size)
-    ax.pie(counts, labels=counts.index, autopct='%1.1f%%', startangle=90)
-    ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-    st.pyplot(fig)
     
 # Main function
 def main():
